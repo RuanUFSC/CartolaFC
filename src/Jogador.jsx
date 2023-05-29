@@ -1,12 +1,12 @@
+import Clube from "./Clube.jsx";
+
 const Jogador = (props) => {
+
 
   return (
     <li className="container-players" key={props.jogador.apelido}>
       <div className="container-left">
-        <div className="clube-info">
-          <img className="team-picture" src={props.clube.escudos['60x60']} alt="time"></img>
-          <span className="abreviacao">{props.clube.abreviacao}</span>
-        </div>
+        <Clube clube={props.clube}/>
         <img className="player-picture" src="https://s.sde.globo.com/media/person_role/2023/05/27/photo_220x220.png" alt="foto"></img>
         <div className="player-info">
           <span className="apelido">{props.jogador.apelido} </span>

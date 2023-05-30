@@ -7,7 +7,7 @@ const Jogador = (props) => {
     <li className="container-players" key={props.jogador.apelido}>
       <div className="container-left">
         <Clube clube={props.clube}/>
-        <img className="player-picture" src="https://s.sde.globo.com/media/person_role/2023/05/27/photo_220x220.png" alt="foto"></img>
+        <img className="player-picture" src={props.jogador.foto.replace("FORMATO","220x220")} alt="foto"></img>
         <div className="player-info">
           <span className="apelido">{props.jogador.apelido} </span>
           <span className="posicao">{props.posicao.nome.toUpperCase()}</span>

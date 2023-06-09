@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import JogadorMercado from "./JogadorMercado.jsx";
+import './App.jsx'
 
 const JogadoresMercado = () => {
   // Criação dos estados

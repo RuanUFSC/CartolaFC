@@ -5,7 +5,7 @@ const Partida = (props) => {
       return partida.clube_visitante_id == parseInt(id) || partida.clube_casa_id == parseInt(id);
     })
 
-    return partidaDesejada.local;
+    return partidaDesejada?.local;
     // return 'qualquer'
   }
 

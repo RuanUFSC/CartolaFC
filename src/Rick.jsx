@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './Rick.css'
+// import './Rick.css'
 
 const RickAndMortyApp = () => {
   const [characters, setCharacters] = useState([]);
@@ -90,8 +90,8 @@ const RickAndMortyApp = () => {
 
           <ul>
             {filteredCharacters.map((character) => (
-              <li key={character.id}>
-                <img  onClick={() => handleCharacterClick(character.id)} src={character.image} alt={character.name} />
+              <li key={character.id} onClick={() => handleCharacterClick(character.id)} >
+                <img src={character.image} alt={character.name} />
                 <p>{character.name}</p>
                 <p>{character.status}</p>
               </li>

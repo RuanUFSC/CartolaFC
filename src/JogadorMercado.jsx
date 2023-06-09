@@ -8,8 +8,8 @@ const JogadorMercado = (props) => {
     <li className="container-players" key={props.jogador.apelido}>
       <div className="container-left">
         <Clube clube={props.clube}/>
-        <img className="player-picture" src="https://s.sde.globo.com/media/person_role/2023/05/27/photo_220x220.png" alt="foto"></img>
-        <div className="player-info">
+        <img className="cartola-logo" src={props?.jogador?.foto?.replace("FORMATO","220x220")} alt="cartola logo" />
+          <div className="player-info">
           <span className="apelido">{props.jogador.apelido} </span>
           <span className="posicao">{props.posicao.nome.toUpperCase()}</span>
         </div>
@@ -19,7 +19,7 @@ const JogadorMercado = (props) => {
       <span className={props.jogador.variacao_num >= 0 ? ' positiva' : ' negativa'}>{props.jogador.variacao_num.toFixed(2)}</span>
       <span>{props.jogador.pontos_num}</span>
       <span className={props.jogador.media_num >= 0 ? ' positiva' : ' negativa'}>{props.jogador.media_num.toFixed(2)}</span>
-      <span className={props.jogador.minimo_para_valorizar >= 0 ? ' positiva' : ' negativa'}>{props.jogador.minimo_para_valorizar.toFixed(2)}</span>
+      <span className={props.jogador.minimo_para_valorizar >= 0 ? ' positiva' : ' negativa'}>{props?.jogador?.minimo_para_valorizar?.toFixed(2)}</span>
       <Partida clube={props.clube} partidas={props.partidas} />
       
       
